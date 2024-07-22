@@ -1,0 +1,173 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Gris claro */
+    padding-top: 60px;
+}
+
+/* Encabezado */
+header {
+    background-color: #2c3e50; /* Azul oscuro */
+    color: #ecf0f1; /* Gris claro */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 5px 0 0;
+}
+
+/* Menú de navegación */
+nav {
+    position: fixed;
+    background-color: #34495e; /* Azul grisáceo */
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #ecf0f1; /* Gris claro */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #1a252f; /* Azul muy oscuro */
+}
+
+/* Secciones */
+section {
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Sección de productos */
+#productos {
+    position: relative;
+    width: 100%;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item {
+    width: calc(50% - 20px); /* 2 productos por fila con espacio */
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: #bdc3c7; /* Gris medio */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Ajusta la altura máxima para las imágenes */
+    object-fit: cover; /* Asegura que la imagen se recorte correctamente */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-item h3 {
+    color: #2c3e50; /* Azul oscuro */
+    margin: 10px 0;
+}
+
+.product-item button {
+    background-color: #34495e; /* Azul grisáceo */
+    color: #ecf0f1; /* Gris claro */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.product-item button:hover {
+    background-color: #1a252f; /* Azul muy oscuro */
+}
+
+/* Paginación */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination-button {
+    background-color: #2c3e50; /* Azul oscuro */
+    color: #ecf0f1; /* Gris claro */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.pagination-button:hover {
+    background-color: #1a252f; /* Azul muy oscuro */
+}
+
+.pagination-button:disabled {
+    background-color: #7f8c8d; /* Gris oscuro */
+    cursor: not-allowed;
+}
+
+/* Contacto y carrito */
+section#contacto, section#carrito {
+    background-color: #bdc3c7; /* Gris medio */
+}
+
+section#contacto p, section#carrito p {
+    color: #333;
+}
+
+section#contacto a {
+    color: #2c3e50; /* Azul oscuro */
+    text-decoration: none;
+}
+
+section#contacto a:hover {
+    text-decoration: underline;
+}
+
+/* Adaptativo */
+@media (max-width: 768px) {
+    nav a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .product-item {
+        width: 100%; /* Solo un producto por fila en pantallas pequeñas */
+    }
+}
